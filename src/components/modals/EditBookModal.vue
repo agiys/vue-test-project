@@ -49,12 +49,11 @@ import { useBookCatalogStore } from "@/stores/bookCatalog";
 import AddButton from "../ui/AddButton.vue";
 import { ref } from "vue";
 
-const emit = defineEmits(["clickButton"]);
+const emit = defineEmits(["clickButton", 'closeModal']);
 const store = useBookFormStore();
 const catalogStore = useBookCatalogStore();
 const errors = ref<{ [key: string]: string }>({});
 const currentYear = new Date().getFullYear();
-
 const inputs = [
   {
     id: 1,
